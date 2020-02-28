@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "express": "nodemon --watch ./testh5 ./testh5/serve1.js"
+    "express": "nodemon ./testh5/serve1.js"
   },
   "dependencies": {
     "axios": "^0.19.2",
