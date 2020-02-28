@@ -6,7 +6,7 @@
           {{ item.title }}
           <div class="div-content" :id="giveContentId(index)" v-html="item.description"></div>
         </div>
-        <van-divider class="div-divider" />
+        <hr class="div-divider" />
       </div>
     </van-list>
   </div>
@@ -63,13 +63,13 @@ export default {
       return false;
     },
     clickDisplay(index) {
-      $("#title_" + index).css("color","rgb(197, 194, 194)");
+      $("#title_" + index).css("color", "rgb(197, 194, 194)");
       if ($("#content_" + index).css("display") == "none") {
         $("#content_" + index).slideDown("slow");
-        $("#content_" + index).css("color","black");
+        $("#content_" + index).css("color", "black");
       } else {
         $("#content_" + index).css("display", "none");
-        $.scrollTo("#title_" + index,500);
+        $.scrollTo("#title_" + index, 500);
       }
     }
   }
@@ -93,7 +93,6 @@ export default {
 .div-divider {
   width: 85%;
   margin: 3%;
-  border-color: black;
   padding: 0 4.5% 0 4.5%;
 }
 table {

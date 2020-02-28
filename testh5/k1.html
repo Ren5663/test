@@ -12,14 +12,15 @@
         }
         .box{
             width: 600px;
-            height: 600px;
+            height: 0px;
             border: 1px solid black;
             margin: 60px auto;
-            background-image: url(./y1/img/ercode.png);
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center center;
-            overflow: auto;
+            overflow: hidden;
+            animation: move 5s linear forwards;
+        }
+        @keyframes move{
+            from{height: 0px;}
+            to{height: auto;}
         }
         ul{
             list-style: none;

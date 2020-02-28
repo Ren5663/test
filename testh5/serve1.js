@@ -1,7 +1,11 @@
 var express = require('express');
 var app = express();
 
-app.use(express.static('./dist'));
+// app.use(express.static('./dist'));
+
+app.get('/', (req, res) => {
+    res.sendFile('D:\\Projects\\Web Project 2\\test\\testh5\\k2.html')
+});
 
 app.get('/geturl', (req, res) => {
     res.json({
@@ -16,4 +20,4 @@ app.get('/geturl', (req, res) => {
     // debugger;
 });
 
-app.listen(8080, () => { });
+app.listen(8081, () => { });
