@@ -14,14 +14,14 @@
 
 <script>
 import Vue from "vue";
-import { Cell, CellGroup, List, Divider } from "vant";
+import { List } from "vant";
 import $ from "jquery";
 import "jquery.scrollto";
 
-Vue.use(Divider);
+// Vue.use(Divider);
 Vue.use(List);
-Vue.use(Cell);
-Vue.use(CellGroup);
+// Vue.use(Cell);
+// Vue.use(CellGroup);
 
 var json = require("./news.json");
 
