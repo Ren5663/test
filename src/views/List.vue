@@ -1,12 +1,12 @@
 <template>
-  <div class="list">
+  <div class="list" id="list">
     <van-list v-model="loading" :finished="finished" finished-text="没有更多了" @load="onLoad">
       <div v-for="(item,index) in list" :key="index">
         <div class="div-title" @click="clickDisplay(index)" :id="giveTitleId(index)">
           {{ item.title }}
           <div class="div-content" :id="giveContentId(index)" v-html="item.description"></div>
         </div>
-        <hr class="div-divider" />
+        <hr class="div-divider" :id="giveDividerId(index)" />
       </div>
     </van-list>
   </div>
@@ -14,14 +14,14 @@
 
 <script>
 import Vue from "vue";
-import { Cell, CellGroup, List, Divider } from "vant";
+import { List } from "vant";
 import $ from "jquery";
 import "jquery.scrollto";
 
-Vue.use(Divider);
+// Vue.use(Divider);
 Vue.use(List);
-Vue.use(Cell);
-Vue.use(CellGroup);
+// Vue.use(Cell);
+// Vue.use(CellGroup);
 
 var json = require("./news.json");
 
@@ -40,6 +40,9 @@ export default {
     },
     giveContentId(index) {
       return "content_" + index;
+    },
+    giveDividerId(index) {
+      return "divider_" + index;
     },
     onLoad() {
       // 异步更新数据
@@ -69,7 +72,11 @@ export default {
         $("#content_" + index).css("color", "black");
       } else {
         $("#content_" + index).css("display", "none");
-        $.scrollTo("#title_" + index, 500);
+        if (index == 0) {
+          $.scrollTo("#nav", 500);
+        } else {
+          $.scrollTo("#divider_" + (index-1), 500);
+        }
       }
     }
   }
