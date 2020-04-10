@@ -4,7 +4,7 @@ var app = express();
 // app.use(express.static('./dist'));
 
 app.get('/', (req, res) => {
-    res.sendFile('D:\\Projects\\Web Project 2\\test\\testh5\\k2.html')
+    res.sendFile('')
 });
 
 app.get('/geturl', (req, res) => {

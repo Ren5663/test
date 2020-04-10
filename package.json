@@ -6,8 +6,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "express": "nodemon ./testh5/serve1.js",
-    "auto": "node ./autotest/auto1.js"
+    "api": "nodemon ./nodeapi/serve1.js",
+    "auto": "node ./autotest/auto1.js",
+    "test": "nodemon --watch testfiles testfiles/test1.js"
   },
   "dependencies": {
     "axios": "^0.19.2",
