@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import List from '../views/List.vue'
+import tick from '../views/tick.vue'
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,11 @@ const routes = [
     path: '/list',
     name: 'list',
     component: List
+  },
+  {
+    path: '/tick',
+    name: 'tick',
+    component: tick
   },
   {
     path: '/about',

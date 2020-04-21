@@ -23,7 +23,7 @@ Vue.use(List);
 // Vue.use(Cell);
 // Vue.use(CellGroup);
 
-var json = require("./news.json");
+var json = require("../../public/json/news.json");
 
 export default {
   name: "list",
